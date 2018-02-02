@@ -17,6 +17,14 @@ For whatever reason I couldn't avoid this so I added the alias to my `.zshrc` li
 
 `alias dx='dx.sh'`
 
+### Bonus Aliases!!!
+I figure why not include some other nice tips/tricks for those that are still reading this:
+```
+# DX Aliases
+alias dx='dx.sh'
+alias dxq="sfdx force:data:soql:query -u Production -q $@"
+alias soql="sfdx force:data:soql:query -q $@"
+```
 ## Special Thanks
 Couldn't publish this without a huge thanks to [@JonDum](https://github.com/JonDum) for writing the script
 
