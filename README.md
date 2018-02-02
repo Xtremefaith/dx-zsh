@@ -8,6 +8,15 @@ Simple clone or download the `dx.sh` file and put it in your `$PATH`. If you're 
 
 `export PATH=$HOME/.oh-my-zsh/bin:$PATH`
 
+### Additional Notes
+You may need to setup an alias for the script to avoid typing `dx.sh` everytime. I'm told you shouldn't have to if you make it executable like so
+
+`chmod +x dx.sh`
+
+For whatever reason I couldn't avoid this so I added the alias to my `.zshrc` like so:
+
+`alias dx='dx.sh'`
+
 ## Special Thanks
 Couldn't publish this without a huge thanks to [@JonDum](https://github.com/JonDum) for writing the script
 
