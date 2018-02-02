@@ -22,9 +22,22 @@ I figure why not include some other nice tips/tricks for those that are still re
 ```
 # DX Aliases
 alias dx='dx.sh'
-alias dxq="sfdx force:data:soql:query -u Production -q $@"
-alias soql="sfdx force:data:soql:query -q $@"
+alias dxq="sfdx force:data:soql:query -u Production -q $@"   // Change Production to your alias HubOrg
+alias soql="sfdx force:data:soql:query -q $@"                // Instantly SOQL your current defaultusername org
 ```
+
+Now you can query your production org like so:
+
+`dxq "SELECT Id, Name, OwnerId FROM Account LIMIT 10"`
+
+Also you can query your current defaultusername org like so:
+
+`soql "SELECT Id, Name, OwnerId FROM Account LIMIT 10"`
+
+Maybe you don't want your defaultusername, then modify it:
+
+`soql "SELECT Id, Name, OwnerId FROM Account LIMIT 10" -u myorgalias`
+
 ## Special Thanks
 Couldn't publish this without a huge thanks to [@JonDum](https://github.com/JonDum) for writing the script
 
