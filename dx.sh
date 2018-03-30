@@ -1,4 +1,10 @@
 #!/bin/sh
+
 f="$1"
 shift
-bash -c "sfdx force:$f $@"
+if [ "$f" == "" ]; then
+    sfdx force --help
+else
+    cmd="sfdx force:$f $@"
+    bash -c "$cmd"
+fi
